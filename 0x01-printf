@@ -1,0 +1,41 @@
+#include "main.h"
+
+int _printf(const char *format, ...)
+{
+    va_list args;
+    int len = 0;
+
+    va_start(args, format);
+
+    while (*format)
+    {
+        if (*format == '%')
+        {
+            format++;
+            switch (*format)
+            {
+                case 'c':
+                    len += print_char(args, NULL);
+                    break;
+                case 's':
+                    len += print_string(args, NULL);
+                    break;
+                case '%':
+                    len += print_percent(args, NULL);
+                    break;
+                default:
+                    len += _putchar('%');
+                    len += _putchar(*format);
+            }
+        }
+        else
+        {
+            len += _putchar(*format);
+        }
+        format++;
+    }
+
+    va_end(args);
+    return len;
+}
+
