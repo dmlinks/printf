@@ -10,7 +10,7 @@ int _puts(char *str)
 	int num_chars = 0;
 
 	if (str == NULL)
-		return;
+		str = "(null)";
 
 	while (*str != '\0')
 	{
