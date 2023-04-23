@@ -37,15 +37,15 @@ int _printf(const char *format, ...)
 					_putchar(c);
 					num_chars++;
 					break;
+				case 'd':
+				case 'i':
+					num_chars += print_number(va_arg(args, int));
+					break;
 				default:
-					_putchar('%');
-					_putchar(c);
-					num_chars += 2;
 					break;
 			}
 		}
 	}
 	va_end(args);
-
 	return (num_chars);
 }
