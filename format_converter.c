@@ -28,6 +28,7 @@ int print_string(char *str)
 		write(1, &str[i], 1);
 
 	return (i);
+}
 
 /* ======================== PRINT NUMBER (%i) ======================*/
 
