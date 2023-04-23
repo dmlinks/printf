@@ -20,15 +20,14 @@ int _putchar(char c)
  * @str: Pointer to string to print
  * Return: Number of characters printed.
  */
-int _puts(char *str)
+int print_string(char *str)
 {
-	int i = 0;
+	int i;
 
-	for (; str[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 		write(1, &str[i], 1);
 
 	return (i);
-}
 
 /* ======================== PRINT NUMBER (%i) ======================*/
 
