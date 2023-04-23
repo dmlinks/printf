@@ -45,12 +45,6 @@ int _printf(const char *format, ...)
 			/*case 'i':
 				num_chars += print_number(va_arg(args, int));
 				break;*/
-			case 'i': //Tam's try
-			{
-				int num = va_arg(args, int);
-				num_chars += print_number(num);
-				break;
-			}
 			default:
 				break;
 		}
