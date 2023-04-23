@@ -42,9 +42,9 @@ int _printf(const char *format, ...)
 				num_chars++;
 				break;
 			case 'd':
-			/*case 'i':
+			case 'i':
 				num_chars += print_number(va_arg(args, int));
-				break;*/
+				break;
 			default:
 				break;
 		}
