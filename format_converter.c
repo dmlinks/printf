@@ -25,7 +25,7 @@ int _puts(char *str)
 	int i = 0;
 
 	for (; str[i] != '\0'; i++)
-		write(1, &str[i], 1)
+		write(1, &str[i], 1);
 
 	return (i);
 }
@@ -38,7 +38,7 @@ int _puts(char *str)
  *
  * Return: Number of charcter printed
  */
-int print_number()
+int print_number(int num)
 {
 	int num_chars = 0;
 
