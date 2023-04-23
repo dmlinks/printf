@@ -22,19 +22,12 @@ int _putchar(char c)
  */
 int _puts(char *str)
 {
-	int num_chars = 0;
+	int i = 0;
 
-	if (str == NULL)
-		str = "(null)";
+	for (; str[i] != '\0'; i++)
+		write(1, &str[i], 1)
 
-	while (*str != '\0')
-	{
-		_putchar(*str);
-		num_chars++;
-		str++;
-	}
-
-	return (num_chars);
+	return (i);
 }
 
 /* ======================== PRINT NUMBER (%i) ======================*/
@@ -45,7 +38,7 @@ int _puts(char *str)
  *
  * Return: Number of charcter printed
  */
-int print_number(int num)
+int print_number()
 {
 	int num_chars = 0;
 
