@@ -35,32 +35,15 @@ int _printf(const char *format, ...)
 				s = va_arg(args, char *)
 				num_chars += print_string(s);
 				break;
-			case 'd':  //Tam's attempt from here till the break
-			case 'i':
-				num_chars += print_number(va_arg(args, int));
-				break;
 			case '%':
 				c = '%';
 				_putchar(c);
 				num_chars++;
 				break;
-<<<<<<< HEAD
-			/*case 'd':*/
+			case 'd':
 			/*case 'i':
 				num_chars += print_number(va_arg(args, int));
 				break;*/
-			case 'i': //Tam's try
-			{
-				int num = va_arg(args, int);
-				num_chars += print_number(num);
-				break;
-			}
-=======
-			case 'd':
-			case 'i':
-				num_chars += print_number(va_arg(args, int));
-				break;
->>>>>>> parent of ddf24f1... Updated
 			default:
 				break;
 			}
