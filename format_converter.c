@@ -57,7 +57,7 @@ int print_number(int num)
 	}
 
 	if (num / 10)
-		num_char += print_number(num / 10);
+		num_chars += print_number(num / 10);
 
 	_putchar((num % 10) + '0');
 	num_chars++;
