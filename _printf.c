@@ -36,12 +36,16 @@ int _printf(const char *format, ...)
 				s = va_arg(args, char *);
 				num_chars += print_string(s);
 				break;
+			case 'd':  //Tam's attempt from here till the break
+			case 'i':
+				num_chars += print_number(va_arg(args, int));
+				break;
 			case '%':
 				c = '%';
 				_putchar(c);
 				num_chars++;
 				break;
-			case 'd':
+			/*case 'd':*/
 			/*case 'i':
 				num_chars += print_number(va_arg(args, int));
 				break;*/
