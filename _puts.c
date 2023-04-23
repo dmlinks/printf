@@ -16,7 +16,7 @@ int _puts(char *str)
 	{
 		_putchar(*str);
 		num_chars++;
-		str++
+		str++;
 	}
 
 	return (num_chars);
