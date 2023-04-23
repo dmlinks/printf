@@ -57,3 +57,15 @@ int print_number(int num)
 
 	return (num_chars);
 }
+/* ======================== PRINT INTEGER (%d) ======================*/
+
+/**
+ * print_integer - Prints an integer to stdout
+ * @num: Interger to print
+ *
+ * Return: Number of charcter printed
+ */
+int print_integer(int num)
+{
+	return (print_number(num));
+}
