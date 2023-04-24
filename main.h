@@ -1,11 +1,9 @@
-#ifndef PRINTF_H
-#define PRINTF_H
+#ifndef _MAIN_H_
+#define _MAIN_H_
 
 #include <unistd.h>
-#include <stdarg.h>
 
-int _printf(char *format, ...);
-int _putchar(char c);
+int _printf (char *format, ...);
 int print_string(char *str);
 
 #endif

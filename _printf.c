@@ -1,52 +1,49 @@
+#include <stdarg.h>
 #include "main.h"
 
 /**
- * _printf - Produces output according to a format
- * @format: Pointer to format string
+ * _printf - Works like the standard library printf
+ * @format: format specifer
  * Return: Number of charcters printed
- * excluding null byte
  */
-int _printf(const char *format, ...)
+int _printf(char *format, ...)
 {
+	int num_chars = 0, i;
+	char c;
+	char *s;
 	va_list args;
-	int num_chars = 0, i = 0;
-	char c, *s;
 
 	va_start(args, format);
-	for (; format[i] != '\0'; i++)
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		while (format[i] != '%' && format[i] != '\0')
 		{
 			c = format[i];
-			_putchar(c);
+			write(1, &c, 1);
 			i++;
 		}
-		num_chars = i;
+		num_chars++;
 		if (format[i] == '\0')
-			return(num_chars);
+			return (num_chars);
 		i++;
 		switch (format[i])
 		{
-			case 'c':
-				_putchar(va_arg(args, int);
-				num_chars++;
-				break;
 			case 's':
-				s = va_arg(args, char *)
+				s = va_arg(args, char *);
 				num_chars += print_string(s);
+				break;
+			case 'c':
+				c = (char) va_arg(args, int);
+				write(1, &c, 1);
+				num_chars++;
 				break;
 			case '%':
 				c = '%';
-				_putchar(c);
+				write(1, &c, 1);
 				num_chars++;
 				break;
-			case 'd':
-			/*case 'i':
-				num_chars += print_number(va_arg(args, int));
-				break;*/
 			default:
 				break;
-			}
 		}
 	}
 	va_end(args);
