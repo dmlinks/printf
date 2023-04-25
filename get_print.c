@@ -9,7 +9,6 @@
  * and the first element of the struct, and then the approriate
  * printing function
  * Return: a pointer to the matching printing function
- * Authors: Ehoneah Obed & Abdulhakeem Badejo
  */
 int (*get_print(char s))(va_list, flags_t *)
 {
