@@ -6,7 +6,6 @@
  * @base: input base
  * @lowercase: flag if hexa values need to be lowercase
  * Return: result string
- * Authors: Ehoneah Obed & Abdulhakeem Badejo
  */
 char *convert(unsigned long int num, int base, int lowercase)
 {
